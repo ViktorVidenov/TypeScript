@@ -14,9 +14,7 @@ function main() {
     }, 2222, 1111);
     // console.log(phone.phoneInfo());
     phone.addOrDeleteOrEditPhoneCall('Add');
-    phone.addOrDeleteOrEditPhoneCall('Add');
-    phone.addOrDeleteOrEditPhoneCall('Add');
-    phone.addOrDeleteOrEditPhoneCall('Delete');
+    phone.addOrDeleteOrEditPhoneCall('Clear')
     console.log(phone.callHistory);
     console.log(phone.CalculatePriceFromCalls());
 }

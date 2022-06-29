@@ -1,6 +1,3 @@
-
-import { add } from "lodash";
-import { Call } from "./src/classes/Call";
 import { Phone } from "./src/classes/Phone";
 import { BateryType } from "./src/models/models";
 
@@ -22,7 +19,7 @@ function main() {
 
     // console.log(phone.phoneInfo());
     phone.addOrDeleteOrEditPhoneCall('Add')
-    phone.addOrDeleteOrEditPhoneCall('Add')
+    // phone.addOrDeleteOrEditPhoneCall('Clear')
     console.log(phone.callHistory);
 
     console.log(phone.CalculatePriceFromCalls());

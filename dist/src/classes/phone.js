@@ -111,14 +111,14 @@ var Phone = /** @class */ (function (_super) {
     Phone.prototype.addOrDeleteOrEditPhoneCall = function (currentAction) {
         var Add = 'Add';
         var Delete = 'Delete';
-        var Edit = 'Edit';
+        var Clear = 'Clear';
         if (Add === currentAction) {
             this.callHistory.push(this.pushEveryCall());
         }
         else if (Delete === currentAction) {
             this.callHistory.pop();
         }
-        else if (Edit === currentAction) {
+        else if (Clear === currentAction) {
             this.callHistory = [];
         }
         return this.callHistory;

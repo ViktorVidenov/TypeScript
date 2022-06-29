@@ -95,13 +95,13 @@ export class Phone extends Call implements PhoneModel {
     public addOrDeleteOrEditPhoneCall(currentAction: string): string[] {
         const Add = 'Add'
         const Delete = 'Delete'
-        const Edit = 'Edit'
+        const Clear = 'Clear'
 
         if (Add === currentAction) {
             this.callHistory.push(this.pushEveryCall())
         } else if (Delete === currentAction) {
             this.callHistory.pop()
-        } else if (Edit === currentAction) {
+        } else if (Clear === currentAction) {
             this.callHistory = []
         }
         return this.callHistory

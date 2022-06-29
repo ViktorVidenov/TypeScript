@@ -1,5 +1,4 @@
 import { CallModel } from "../models/models";
-import { Phone } from "./Phone";
 
 export class Call implements CallModel {
     public dialedNumber: number;
