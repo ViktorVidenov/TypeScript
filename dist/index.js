@@ -16,7 +16,7 @@ function main() {
     phone.addOrDeleteOrEditPhoneCall('Add');
     phone.addOrDeleteOrEditPhoneCall('Add');
     phone.addOrDeleteOrEditPhoneCall('Add');
-    phone.addOrDeleteOrEditPhoneCall('Add');
+    phone.addOrDeleteOrEditPhoneCall('Delete');
     console.log(phone.callHistory);
     console.log(phone.CalculatePriceFromCalls());
 }
