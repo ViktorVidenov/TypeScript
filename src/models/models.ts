@@ -7,8 +7,8 @@ export interface PhoneModel {
     display: DisplayModel;
     phoneInfo(): string;
     callHistory: string[];
-    addOrDeleteOrEditPhoneCall(currentAction: string): string[];
-    CalculatePriceFromCalls(): number;
+    phoneCallAction(currentAction: string): string[];
+    calculatePriceFromCalls(): number;
 }
 
 export interface BateryModel {
@@ -28,10 +28,15 @@ export enum BateryType {
     NiCD = 'NiCD',
 }
 
-//Maybe i can change callModel with abstract class
+//Maybe i can change callModel with abstract class if(to be 2 or more classes)
 export interface CallModel {
     dialedNumber: number;
     duration: number;
     currentDate: Date;
 }
 
+export enum PhoneAction {
+    Add = 'Add',
+    Delete = 'Delete',
+    Clear = 'Clear',
+}

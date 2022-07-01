@@ -1,3 +1,4 @@
+import { Call } from "./src/classes/Call";
 import { Phone } from "./src/classes/Phone";
 import { BateryType } from "./src/models/models";
 
@@ -14,16 +15,21 @@ function main() {
     }, {
         size: 3,
         colors: 20,
-    }, 2222, 1111,
-    );
+    });
 
-    // console.log(phone.phoneInfo());
-    phone.addOrDeleteOrEditPhoneCall('Add')
-    // phone.addOrDeleteOrEditPhoneCall('Clear')
-    console.log(phone.callHistory);
-
-    console.log(phone.CalculatePriceFromCalls());
+    // const call: Call = new Call(new Date(), 222, 111)
     
+    console.log(phone.phoneInfo());
+    // phone.phoneCallAction('Add')
+    // phone.phoneCallAction('Add')
+    // phone.phoneCallAction('Add')
+    // console.log(phone.callHistory);
+    
+    // phone.phoneCallAction('Clear')
+    // console.log(phone.callHistory);
+
+    // console.log(phone.calculatePriceFromCalls());
+
 
 
 

@@ -11,11 +11,15 @@ function main() {
     }, {
         size: 3,
         colors: 20,
-    }, 2222, 1111);
-    // console.log(phone.phoneInfo());
-    phone.addOrDeleteOrEditPhoneCall('Add');
-    phone.addOrDeleteOrEditPhoneCall('Clear')
+    });
+    // const call: Call = new Call(new Date(), 222, 111)
+    console.log(phone.phoneInfo());
+    phone.phoneCallAction('Add')
+    // phone.phoneCallAction('Add')
+    // phone.phoneCallAction('Add')
     console.log(phone.callHistory);
-    console.log(phone.CalculatePriceFromCalls());
+    // phone.phoneCallAction('Clear')
+    // console.log(phone.callHistory);
+    // console.log(phone.calculatePriceFromCalls());
 }
 main();

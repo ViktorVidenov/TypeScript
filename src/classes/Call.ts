@@ -1,24 +1,41 @@
 import { CallModel } from "../models/models";
 
 export class Call implements CallModel {
-    public dialedNumber: number;
-    public duration: number;
-    public currentDate: Date = new Date()
+    private _currentDate: Date = new Date()
+    private _dialedNumber: number;
+    private _duration: number;
+
+    get currentDate(): Date {
+        return this._currentDate
+    }
+
+    get dialedNumber(): number {
+        return this._dialedNumber
+    }
+
+    get duration(): number {
+        return this._duration
+    }
 
     constructor(
-        dialedNumber: number,
-        duration: number,
+        currentDate?: Date,
+        dialedNumber?: number,
+        duration?: number,
     ) {
-        this.dialedNumber = dialedNumber
-        this.duration = duration
+        this._currentDate = currentDate
+        this._dialedNumber = dialedNumber
+        this._duration = duration
     }
 
     public getDurationInSeconds(duration: number): number {
-        duration = (this.duration * 60)
+        duration = (duration * 60)
         return duration
     }
 
     public getCurrentCall(): string {
-        return `Date: ${this.currentDate.toDateString()} Time: ${this.currentDate.getHours() + ':' + (this.currentDate.getMinutes() < 10 ? '0' : '') + this.currentDate.getMinutes()} Number: ${this.dialedNumber} Duration in seconds: ${this.getDurationInSeconds(this.duration)}`
+        const currentDate = new Date()
+        const dialedNumber = Math.floor(359880000000 + Math.random() * 900000);
+        const duration = Math.floor(Math.random() * 1000);
+        return `Date: ${currentDate.toDateString()} Time: ${currentDate.getHours() + ':' + (currentDate.getMinutes() < 10 ? '0' : '') + currentDate.getMinutes()} Number: ${dialedNumber} Duration in seconds: ${this.getDurationInSeconds(duration)}`
     }
 }
