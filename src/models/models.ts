@@ -28,7 +28,7 @@ export enum BateryType {
     NiCD = 'NiCD',
 }
 
-//Maybe i can change callModel with abstract class if(to be 2 or more classes)
+//Maybe i can change callModel with abstract class if(to 2 or more classes)
 export interface CallModel {
     dialedNumber: number;
     duration: number;
