@@ -3,11 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Phone = void 0;
 var models_1 = require("../models/models");
 var Call_1 = require("./Call");
-/*Private routation*/
 var Phone = /** @class */ (function () {
     function Phone(model, manufacturer, price, owner, batery, display) {
         this.callHistory = [];
-        //Here assign value from constructor
         this._model = model;
         this._manufacturer = manufacturer;
         this._price = price;
@@ -40,7 +38,6 @@ var Phone = /** @class */ (function () {
         get: function () {
             return this._owner;
         },
-        //Here we can set the value on owner variable if its private
         set: function (value) {
             this._owner = value;
         },
@@ -88,7 +85,6 @@ var Phone = /** @class */ (function () {
         else if (models_1.PhoneAction.Clear === currentAction) {
             this.callHistory = [];
         }
-        return this.callHistory;
     };
     Phone.prototype.calculatePriceFromCalls = function () {
         var sum = 0;

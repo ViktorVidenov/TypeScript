@@ -16,23 +16,8 @@ function main() {
         size: 3,
         colors: 20,
     });
-
-    // const call: Call = new Call(new Date(), 222, 111)
     
     console.log(phone.phoneInfo());
-    // phone.phoneCallAction('Add')
-    // phone.phoneCallAction('Add')
-    // phone.phoneCallAction('Add')
-    // console.log(phone.callHistory);
-    
-    // phone.phoneCallAction('Clear')
-    // console.log(phone.callHistory);
-
-    // console.log(phone.calculatePriceFromCalls());
-
-
-
-
 }
 
 main()
