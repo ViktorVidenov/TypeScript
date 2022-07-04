@@ -1,5 +1,5 @@
 import { Call } from "./src/classes/Call";
-import { Phone } from "./src/classes/Phonee";
+import { Phone } from "./src/classes/Phone";
 import { BateryType } from "./src/models/models";
 
 function main() {
