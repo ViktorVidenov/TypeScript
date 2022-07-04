@@ -2,13 +2,13 @@ import { BateryModel, DisplayModel, PhoneAction, PhoneModel } from "../models/mo
 import { Call } from "./Call";
 
 export class Phone implements PhoneModel {
+    public callHistory: string[] = [];
     private _model: string;
     private _manufacturer: string;
     private _price?: number;
     private _owner?: string;
     private _batery?: BateryModel;
     private _display?: DisplayModel;
-    public callHistory: string[] = [];
 
     get model(): string {
         return this._model;
