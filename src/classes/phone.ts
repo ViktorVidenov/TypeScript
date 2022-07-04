@@ -1,9 +1,7 @@
 import { BateryModel, DisplayModel, PhoneAction, PhoneModel } from "../models/models";
 import { Call } from "./Call";
 
-/*Private routation*/
 export class Phone implements PhoneModel {
-    //Properties on the class 
     private _model: string;
     private _manufacturer: string;
     private _price?: number;
@@ -28,7 +26,6 @@ export class Phone implements PhoneModel {
         return this._owner
     }
 
-    //Here we can set the value on owner variable if its private
     set owner(value: string) {
         this._owner = value;
     }
@@ -49,7 +46,6 @@ export class Phone implements PhoneModel {
         batery?: BateryModel,
         display?: DisplayModel,
     ) {
-        //Here assign value from constructor
         this._model = model;
         this._manufacturer = manufacturer;
         this._price = price;
@@ -77,7 +73,7 @@ export class Phone implements PhoneModel {
         return message;
     }
 
-    public phoneCallAction(currentAction: string): string[] {
+    public phoneCallAction(currentAction: string): void {
         const call: Call = new Call();
         if (PhoneAction.Add === currentAction) {
             this.callHistory.push(call.getCurrentCall())
@@ -86,7 +82,6 @@ export class Phone implements PhoneModel {
         } else if (PhoneAction.Clear === currentAction) {
             this.callHistory = []
         }
-        return this.callHistory
     }
 
     public calculatePriceFromCalls(): number {

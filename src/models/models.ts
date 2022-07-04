@@ -7,7 +7,7 @@ export interface PhoneModel {
     display: DisplayModel;
     phoneInfo(): string;
     callHistory: string[];
-    phoneCallAction(currentAction: string): string[];
+    phoneCallAction(currentAction: string): void;
     calculatePriceFromCalls(): number;
 }
 
