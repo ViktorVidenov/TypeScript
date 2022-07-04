@@ -3,7 +3,6 @@ import { Phone } from "./src/classes/Phone";
 import { BateryType } from "./src/models/models";
 
 function main() {
-    // const date = new Date()
     const phone: Phone = new Phone(
         '3310',
         'Nokia',
@@ -18,6 +17,9 @@ function main() {
     });
     
     console.log(phone.phoneInfo());
+    console.log(phone.phoneCallAction('Add'));
+    console.log(phone.phoneCallAction('Add'));
+    console.log(phone.callHistory);
 }
 
 main()

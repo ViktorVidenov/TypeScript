@@ -3,7 +3,5 @@
         "target": "ES5",
         "outDir": "dist",
         "watch": true,
-        // "module": "es2015",
-        // "types": ["module"]
     }
 }

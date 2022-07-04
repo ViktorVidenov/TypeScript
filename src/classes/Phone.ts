@@ -75,6 +75,7 @@ export class Phone implements PhoneModel {
 
     public phoneCallAction(currentAction: string): void {
         const call: Call = new Call();
+        
         if (PhoneAction.Add === currentAction) {
             this.callHistory.push(call.getCurrentCall())
         } else if (PhoneAction.Delete === currentAction) {
