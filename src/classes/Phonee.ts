@@ -61,7 +61,7 @@ export class Phone implements PhoneModel {
             message += `\nPrice: ${this._price}`;
         }
         if (this._owner) {
-            message += `\nOwner: ${this._owner}`;
+            message += `\nOwner: ${this._owner}`; 
         }
         if (this._batery) {
             message += `\nBattery:\n Model: ${this._batery.model}\n hoursIde: ${this._batery.hoursIdle}\n hoursTalk: ${this._batery.hours}`;
