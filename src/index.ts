@@ -1,6 +1,6 @@
-import { Call } from "./src/classes/Call";
-import { Phone } from "./src/classes/Phone";
-import { BateryType } from "./src/models/models";
+import { Call } from "./classes/Call";
+import { Phone } from "./classes/Phone";
+import { BateryType } from "./models/models";
 
 function main() {
     const phone: Phone = new Phone(
@@ -11,11 +11,8 @@ function main() {
         hoursIdle: 100,
         hours: 200,
         model: BateryType.LiIon
-    }, {
-        size: 3,
-        colors: 20,
-    });
-    
+    }, { colors: 20, size: 30 });
+
     console.log(phone.phoneInfo());
     console.log(phone.phoneCallAction('Add'));
     console.log(phone.phoneCallAction('Add'));

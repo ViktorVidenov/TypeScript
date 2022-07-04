@@ -5,8 +5,8 @@ export interface PhoneModel {
     owner: string;
     batery: BateryModel;
     display: DisplayModel;
-    phoneInfo(): string;
     callHistory: string[];
+    phoneInfo(): string;
     phoneCallAction(currentAction: string): void;
     calculatePriceFromCalls(): number;
 }
